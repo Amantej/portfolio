@@ -1,2 +1,2 @@
 My Portfolio,
-link - https://amantej.github.io
+link - https://amantej.github.io/portfolio
