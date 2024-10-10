@@ -1,192 +1,406 @@
 <!DOCTYPE html>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
   <head>
-    <title>Portfolio</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1>Aman Tej Vidapu <br> Portfolio</h1>
-		<p>Data Scientist at LexisNexis</p>
-        <ul class="actions">
-          <li>
-            <a
-              href="#header"
-              class="button icon solid solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Aman Tej Vidapu</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Aman Tej Vidapu</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile-pic.png"
+          alt="Aman Tej Vidapu profile picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Aman Tej Vidapu</h1>
+        <p class="section__text__p2">Data Scientist</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Aman_Tej_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/aman-tej-vidapu/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/amantej'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>3+ years <br />Data Scientist</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. in Computer Science<br />M.Sc. in Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Results-driven Data Scientist with nearly 3 years of experience in
+              designing and deploying scalable data pipelines, implementing
+              advanced NLP models, and leveraging Large Language Models (LLMs)
+              to extract meaningful insights that support informed business
+              decisions. Proficient in cloud computing and distributed systems,
+              with hands-on expertise in machine learning, including deep
+              learning techniques, time-series forecasting, and complex
+              statistical analysis. Adept at optimizing operational workflows,
+              improving model accuracy, and enhancing overall performance by
+              applying cutting-edge technologies. Skilled in translating complex
+              data into actionable recommendations and delivering impactful
+              insights through effective data visualization. Highly motivated to
+              drive continuous innovation and deliver tangible value in
+              data-driven environments.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">Home</a>
-      </header>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Experience: Data Scientist I -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Scientist I</h2>
+            <div>
+              <h3>LexisNexis</h3>
+              <p>Jan 2023 - Oct 2024</p>
+              <p>
+                Designed scalable data pipelines using Scala, Spark, and Python,
+                improving data processing for NLP solutions and delivering
+                actionable insights to stakeholders for better business
+                decisions.<br />
+              </p>
+            </div>
 
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="index.html">Home</a></li>
-		  <li><a href="projects.html">Projects</a></li>
-        </ul>
-        <ul class="icons">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/aman-tej-vidapu/"
-              class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/amantej" class="icon brands fa-github"
-              ><span class="label">GitHub</span></a
-            >
-          </li>
-        </ul>
-      </nav>
+            <!-- Skills for Data Scientist I -->
+            <div class="article-container">
+              <article>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>Python</h3>
+                  <p>Advanced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>SQL</h3>
+                  <p>Advanced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>NLP</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
 
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
-            <h2>
-              <a href="#"
-                >Hello World</a
-              >
+              <article>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>AWS</h3>
+                  <p>Experienced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>scala-spark</h3>
+                  <p>Experienced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>LLMs</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Experience: Graduate Research Assistant -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Graduate Research Assistant</h2>
+            <div>
+              <h3>University of North Carolina Greensboro</h3>
+              <p>Mar 2022 - Dec 2022</p>
+              <p>
+                Assisting Dr Minjeong Kim in a collaboration with Wake Forest
+                University to develop bounding boxes and precisely track the
+                center of cancer cell nuclei.<br />
+              </p>
+            </div>
+
+            <!-- Skills for Graduate Research Assistant -->
+            <div class="article-container">
+              <article>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>Python</h3>
+                  <p>Advanced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>Deep Learning</h3>
+                  <p>Experienced</p>
+                </div>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>Time-Series Forecasting</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <h3>CNN/RNN</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrow -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/pic02.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Covid-19 Real time analysis
             </h2>
-            <p>
-              I am a Highly motivated NLP professional with a strong foundation in deep learning. I possess almost 2 years of industry experience and 1 year of university research experience applying deep learning techniques to Natural Language Processing tasks. This combination allows me to bring both theoretical knowledge and practical skills to solve real-world NLP challenges. 	
-            </p>
-          </header>
-          <ul class="actions special">
-            <li><a href="https://drive.google.com/file/d/1WB9gTv7Dtss8DmRP_lNkuV3IBnWIXbz5/view?usp=sharing" class="button large">My Resume</a></li>
-          </ul>
-        </article>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <section>
-		<h2>Get in Touch</h2>
-<form id="contact-form" method="POST" action="https://formspree.io/f/xwpkeyya">
-  <div class="fields">
-    <div class="field">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" required />
-    </div>
-    <div class="field">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" required />
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea name="message" id="message" rows="3" required></textarea>
-    </div>
-  </div>
-  <ul class="actions">
-    <li><input type="submit" value="Send Message" /></li>
-  </ul>
-  <div id="response-message" style="display:none;"></div>
-</form>
-
-<script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            const form = this;
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Success message
-                    document.getElementById('response-message').innerText = 'Thank you, message sent!';
-                    document.getElementById('response-message').className = 'success';
-                    document.getElementById('response-message').style.display = 'block';
-                    form.reset(); // Optional: reset the form fields
-                } else {
-                    throw new Error('Something went wrong. Please try again.');
-                }
-            })
-            .catch(error => {
-                // Error message
-                document.getElementById('response-message').innerText = 'Error: ' + error.message;
-                document.getElementById('response-message').className = 'error';
-                document.getElementById('response-message').style.display = 'block';
-            });
-        });
-    </script>
-
-        </section>
-        <section class="split contact">
-          <section class="alt">
-            <h3>Address</h3>
-            <p>
-              1410 varsity dr,<br />
-              Raleigh, NC 27403
-            </p>
-          </section>
-          <section>
-            <h3>Phone</h3>
-            <p><a href="#">(336) 493-1967</a></p>
-          </section>
-          <section>
-            <h3>Email</h3>
-            <p><a href="#">amantejv7@gmail.com</a></p>
-          </section>
-          <section>
-            <h3>Social</h3>
-            <ul class="icons alt">
-              <li>
-                <a href="https://www.linkedin.com/in/aman-tej-vidapu/" class="icon brands alt fa-linkedin"
-                  ><span class="label">LinkedIn</span></a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/amantej" class="icon brands alt fa-github"
-                  ><span class="label">GitHub</span></a
-                >
-              </li>
-            </ul>
-          </section>
-        </section>
-      </footer>
-
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul>
-          <li>&copy; Aman Tej Vidapu</li>
-        </ul>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Amantej/covid-19-real-time-analysis'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://covid-19-real-time-analysis.onrender.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img2.jpeg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Big Data: Machine learning framework
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Amantej/CSC_610'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Computer-Store</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Amantej/CSC671'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:amantejv7@gmail.com">amantejv7@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/aman-tej-vidapu/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Aman Tej Vidapu. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
